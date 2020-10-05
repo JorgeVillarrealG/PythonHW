@@ -53,9 +53,8 @@ with open (file,"r")as csv_file:
     Winner: {winner}
     -----------------------------------------
     """
-    output_file="Analysis/Analysis.csv"
-    with open(output_file,"w")as file:
-        csv_writer=csv.writer(file)
-        csv_writer.writerows(output_data)
+    output_txt="Analysis/Analysis.txt"
+    with open(output_txt,"w")as file:
+        file.write(output_data)
     print (output_data)
 

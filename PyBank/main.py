@@ -48,10 +48,9 @@ with open(file,"r")as csvfile:
 
     ----------------------
     """
-    output_csv="Analysis/Analysis.csv"
-    with open(output_csv,"w")as file:
-        csv_writer=csv.writer(file)
-        csv_writer.writerows(output)
+    output_txt="Analysis/Analysis.txt"
+    with open(output_txt,"w")as file:
+        file.write(output)
     print(output)
 
         
