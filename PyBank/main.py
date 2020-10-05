@@ -25,6 +25,7 @@ with open(file,"r")as csvfile:
         else:
             value=float(row[1])
             change=value-value_past
+            #Save the output variables of greatest and lowes change
             if change>g_inc_change:
                 g_inc_month= row[0]
                 g_inc_change= change
@@ -33,7 +34,9 @@ with open(file,"r")as csvfile:
                 g_dec_change=change
             change_sum=change_sum+change
             value_past=float(row[1])
+    #Change average calculation
     change_avg=change_sum/(months-1)
+    #Output code
     output=f"""
     Finantial Analysis
     --------------------
